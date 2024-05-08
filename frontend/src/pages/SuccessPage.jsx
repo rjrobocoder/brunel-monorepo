@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import brandLogo from "../assets/brand-logo.svg";
 import successIcon from "../assets/success-tick-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const SuccessPage = () => {
+  const navigate = useNavigate();
+  const [countdown, setCountdown] = useState(5);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prevCountdown) => prevCountdown - 1);
+    }, 1000);
+
+    if (countdown === 0) {
+      clearInterval(timer);
+      navigate("/");
+    }
+
+    return () => clearInterval(timer);
+  }, [countdown, navigate]);
+
   return (
     <div className="flex flex-col h-screen">
       <header className="flex justify-between px-[24px] sm:px-[52px] py-[32px] items-center">
@@ -36,7 +53,9 @@ const SuccessPage = () => {
         <div className="absolute bottom-[30px] sm:bottom-[42px]">
           <p className="text-[#727272] text-[15px] sm:text-[20px] font-normal">
             Redirecting you to Homepage in{" "}
-            <span className="text-[#1C1C1C] font-bold">5 Seconds</span>
+            <span className="text-[#1C1C1C] font-bold">
+              {countdown} Seconds
+            </span>
           </p>
         </div>
       </div>
