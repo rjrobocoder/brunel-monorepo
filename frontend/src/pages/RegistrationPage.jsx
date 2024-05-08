@@ -95,10 +95,14 @@ const RegistrationPage = () => {
                 </p>
               </div>
             )}
-
             <button
-              className="max-w-[417px] w-full bg-[#C9C9C9] text-[#FFFFFF] px-[50px] py-[20px] sm:py-[26px] text-[18px] rounded-[107px] mt-[30px] sm:mt-[47px]"
+              className={`max-w-[417px] w-full ${
+                !name.trim() && !email.trim()
+                  ? "bg-[#C9C9C9] cursor-not-allowed"
+                  : "bg-[#1C1C1C]"
+              } text-[#FFFFFF] px-[50px] py-[20px] sm:py-[26px] text-[18px] rounded-[107px] mt-[30px] sm:mt-[47px]`}
               onClick={handleSubmit}
+              disabled={!name.trim() && !email.trim()}
             >
               Submit
             </button>
