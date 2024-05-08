@@ -8,6 +8,7 @@ import arrowRightIcon from "../assets/arrow-right-icon.svg";
 import faqArrowIcon from "../assets/faq-arrow.svg";
 import HeroCarousel from "../components/HeroCarousel";
 import Faq from "react-faq-component";
+import { Link } from "react-router-dom";
 
 const data = {
   rows: [
@@ -154,15 +155,14 @@ const HomePage = () => {
               </div>
               {/* btn */}
               <div>
-                {/* TODO: apply link */}
-                <div className="bg-[#1C1C1C] hover:bg-[#4E4E4E] rounded-[100px] px-[40px] py-[31px] flex justify-center items-center w-fit gap-x-[16px] mt-[80px]">
+                <Link to="/registration" className="bg-[#1C1C1C] hover:bg-[#4E4E4E] rounded-[100px] px-[40px] py-[31px] flex justify-center items-center w-fit gap-x-[16px] mt-[80px]">
                   <span className="text-[#FFFFFF] text-[20px] font-semibold">
                     Explore more
                   </span>
                   <div>
                     <img src={arrowRightIcon} alt="explore more" />
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
