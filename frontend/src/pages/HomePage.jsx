@@ -153,9 +153,11 @@ const HomePage = () => {
               <div className="w-[420px]">
                 <HeroCarousel />
               </div>
-              {/* btn */}
               <div>
-                <Link to="/registration" className="bg-[#1C1C1C] hover:bg-[#4E4E4E] rounded-[100px] px-[40px] py-[31px] flex justify-center items-center w-fit gap-x-[16px] mt-[80px]">
+                <Link
+                  to="/registration"
+                  className="bg-[#1C1C1C] hover:bg-[#4E4E4E] rounded-[100px] px-[40px] py-[31px] flex justify-center items-center w-fit gap-x-[16px] mt-[80px]"
+                >
                   <span className="text-[#FFFFFF] text-[20px] font-semibold">
                     Explore more
                   </span>

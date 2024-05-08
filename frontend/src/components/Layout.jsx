@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
       <header>
         <Header />
       </header>
-      {/* px-[32px] */}
       <main className="pb-[32px]">{children}</main>
       <footer className="px-[32px] pb-[32px]">
         <Footer />
