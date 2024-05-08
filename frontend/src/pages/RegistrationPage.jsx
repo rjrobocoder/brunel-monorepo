@@ -3,6 +3,7 @@ import brandLogo from "../assets/brand-logo.svg";
 import closeIcon from "../assets/close.svg";
 import warnIcon from "../assets/warn-icon.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
@@ -44,6 +45,9 @@ const RegistrationPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Brunel - Register</title>
+      </Helmet>
       <header className="flex justify-between px-[24px] sm:px-[52px] py-[32px] items-center">
         <div>
           <img className="w-[110px]" src={brandLogo} alt="Brand Logo" />

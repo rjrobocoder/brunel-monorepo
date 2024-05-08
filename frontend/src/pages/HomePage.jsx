@@ -9,6 +9,7 @@ import faqArrowIcon from "../assets/faq-arrow.svg";
 import HeroCarousel from "../components/HeroCarousel";
 import Faq from "react-faq-component";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const data = {
   rows: [
@@ -60,6 +61,9 @@ const config = {
 const HomePage = () => {
   return (
     <>
+      <Helmet>
+        <title>Welcome to Brunel</title>
+      </Helmet>
       <Layout>
         <section className="flex flex-col items-center pt-[79px] gap-y-[16px]">
           <h1 className="covered-by-your-grace-regular text-[#2DA950] text-[24px] sm:text-[36px] ">
